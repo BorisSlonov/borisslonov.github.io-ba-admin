@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=cyrillic,cyrillic-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="fancybox-master/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>"Бизнес ангелы"</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <!-- item -->
+                <div class="header-container__item">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <!-- item -->
+                <div class="header-container__item">
+                    <h1>Ангел лист</h1>
+                    <span class='h1-span'>сообщества бизнес ангелы</span>
+                </div>
+                <!-- item -->
+                <div class="header-container__item">
+                    <!-- blue-bg -->
+                    <div class="blue-bg-container">
+                        <h2>статистика</h2>
+                        <div class="blue-bg">
+                            <div class="blue-bg__item">
+                                <span class='blue-name'>Онлайн пользователей</span><br>
+                                <span class='blue-number'>123</span>
+                            </div>
+                            <div class="blue-bg__item">
+                                <span class='blue-name'>Проектов</span><br>
+                                <span class='blue-number'>2526</span>
+                            </div>
+                            <div class="blue-bg__item">
+                                <span class='blue-name'>Посещений сегодня</span><br>
+                                <span class='blue-number'>5322</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- section-search -->
+    <section class="search">
+        <h3>Список проектов</h2>
+            <div class="container">
+                <!-- search-container -->
+                <div class="search-container">
+                    <div class="search-position">
+                        <span>Введите название или номер проекта</span>
+                        <!-- search-form -->
+                        <div class="search-form">
+                            <div class='search-form__input'><input type="text" placeholder="Производство плюшек"></div>
+                            <div class='search-form__btn'>
+                                <button class='search-btn'>
+                                    <img src="img/zoom.png" alt="">
+                                    <span>Найти</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- search-form -->
+                    </div>
+
+
+
+                    <!-- search-answers-container -->
+                    <div class="search-answers-container">
+
+                        <!-- search-answer -->
+                        <div class="search-answer">
+                            <div class='search-answer__answer'>
+                                <span>Производство плюшек</span>
+                            </div>
+                            <!-- main-btn -->
+                            <div class='main-btn-container'>
+                                <button class='main-btn-container__look'>
+                                    <span>Посмотреть</span>
+                                </button>
+                                <button class='main-btn-container__post modalbox' href='#project-form'>
+                                    <span>Разместить</span>
+                                </button>
+                                <button class='main-btn-container__delete'>
+                                    <span>Удалить</span>
+                                </button>
+                            </div>
+                            <!-- main-btn -->
+                        </div>
+                        <!-- search-answer -->
+
+
+                        <!-- project-form -->
+                        <div class='project-form-container container'>
+
+
+
+                            <form action="#" id='project-form' class='project-form'>
+                                <h3>ввод нового проекта</h3>
+                                <div>
+                                    <span>Название проекта</span>
+                                    <input type="text" placeholder="Производство плюшек">
+                                </div>
+
+                                <div>
+                                    <span>Город</span>
+                                    <input type="text" placeholder="Москва">
+                                </div>
+
+                                <div>
+                                    <span>Статус проекта</span>
+                                    <select id="test" name="test">
+                                        <option value="">Посев</option>
+                                        <option value="a1_54">500</option>
+                                        <option value="a2_54">1000</option>
+                                        <option value="a3_54">1500</option>
+                                        <option value="a4_54">2000</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <span>Сумма, руб</span>
+                                    <input type="number" placeholder="25 000 000">
+                                </div>
+
+                                <div>
+                                    <span>Срок окупаемаости, лет</span>
+                                    <input type="number" placeholder="3">
+                                </div>
+
+                                <div>
+                                    <span>ФИО</span>
+                                    <input type="text" placeholder="Иванов И И">
+                                </div>
+
+                                <div>
+                                    <span>Телефон</span>
+                                    <input type="number" placeholder="+7 999 222 11 00">
+                                </div>
+
+                                <div>
+                                    <span>Почта</span>
+                                    <input type="email" placeholder="example@yandex.ru">
+                                </div>
+
+                                <div>
+                                    <span>Краткое описание</span>
+                                    <textarea>сеть плюшечных</textarea>
+                                </div>
+
+                                <div class="project-form-btn-container">
+                                    <button class='done'>Отправить проект</button>
+                                    <button class='dismiss'>Отменить</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- project-form -->
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- search-answers-container -->
+
+
+
+
+
+
+
+            <!-- inquiries-container -->
+            <div class="inquiries-container container">
+                <h3>запросы инвесторов</h3>
+
+                <!-- inq-item -->
+                <div class="inq-position">
+                    <div class='inquiries-number'>
+                        <span>Запрос №32</span>
+                    </div>
+                    <!-- main-btn -->
+                    <div class='main-btn-container'>
+                        <button class='main-btn-container__look modalbox' href='#request-form'>
+                            <span>Посмотреть</span>
+                        </button>
+                        <button class='main-btn-container__delete'>
+                            <span>Удалить</span>
+                        </button>
+                    </div>
+                    <!-- main-btn -->
+                </div>
+                <!-- inq-item -->
+
+                <!-- inq-item -->
+                <div class="inq-position">
+                    <div class='inquiries-number'>
+                        <span>Запрос №32</span>
+                    </div>
+                    <!-- main-btn -->
+                    <div class='main-btn-container'>
+                        <button class='main-btn-container__look modalbox' href='#request-form'>
+                            <span>Посмотреть</span>
+                        </button>
+                        <button class='main-btn-container__delete'>
+                            <span>Удалить</span>
+                        </button>
+                    </div>
+                    <!-- main-btn -->
+                </div>
+                <!-- inq-item -->
+
+
+                <!-- request-form -->
+                <div class="request-form-container">
+                    <form action="#" id="request-form" class='request-form'>
+                        <h4>запрос №32</h4>
+                        <div>
+                            <span>Название проекта</span>
+                            <input type="text" readonly="readonly" placeholder="Производство плюшек">
+                        </div>
+                        <div>
+                            <span>Сумма ваших инвестиций в проект</span>
+                            <div class="invest">
+                                <input type="text" readonly="readonly" placeholder="От 5000000">
+                                <input type="text" readonly='readonly' placeholder="До 10000000">
+                            </div>
+                        </div>
+                        <div>
+                            <span>Город</span>
+                            <input type="text" readonly="readonly" placeholder="Москва">
+                        </div>
+                        <div>
+                            <span>ФИО</span>
+                            <input type="text" readonly="readonly" placeholder="Иванов И И">
+                        </div>
+                        <div>
+                            <span>Телефон</span>
+                            <input type="text" readonly="readonly" placeholder="8 999 222 11 00">
+                        </div>
+                        <div>
+                            <span>Email</span>
+                            <input type="text" placeholder="example@mail.com">
+                        </div>
+                    </form>
+                </div>
+                <!-- request-form -->
+
+
+            </div>
+            <!-- inquiries-container -->
+
+
+
+
+
+
+
+
+
+            <!-- question-container -->
+            <div class="question-container container">
+                <h3>вопросы инвесторов</h3>
+
+                <!-- question-item -->
+                <div class="question-position">
+                    <div class='question-number'>
+                        <span>Запрос №32</span>
+                    </div>
+                    <!-- main-btn -->
+                    <div class='main-btn-container'>
+                        <button class='main-btn-container__look modalbox' href='#quest-form'>
+                            <span>Посмотреть</span>
+                        </button>
+                        <button class='main-btn-container__delete'>
+                            <span>Удалить</span>
+                        </button>
+                    </div>
+                    <!-- main-btn -->
+                </div>
+                <!-- question-item -->
+
+                <!-- question-item -->
+                <div class="question-position">
+                    <div class='question-number'>
+                        <span>Запрос №32</span>
+                    </div>
+                    <!-- main-btn -->
+                    <div class='main-btn-container'>
+                        <button class='main-btn-container__look modalbox' href='#quest-form'>
+                            <span>Посмотреть</span>
+                        </button>
+                        <button class='main-btn-container__delete'>
+                            <span>Удалить</span>
+                        </button>
+                    </div>
+                    <!-- main-btn -->
+                </div>
+                <!-- question-item -->
+                 <!-- quest-form -->
+                 <div class="quest-form-container">
+                    <form action="#" id="quest-form" class='quest-form'>
+                        <h4>вопрос №32</h4>
+                        <div>
+                            <span>Название проекта</span>
+                            <input type="text" readonly="readonly" placeholder="Производство плюшек">
+                        </div>
+                        <div>
+                            <span>Вопрос</span>
+                            <input type="text" readonly='readonly' placeholder="Не указан срок окупаемости">
+                        </div>
+                        <div>
+                            <span>Город</span>
+                            <input type="text" readonly="readonly" placeholder="Москва">
+                        </div>
+                        <div>
+                            <span>ФИО</span>
+                            <input type="text" readonly="readonly" placeholder="Иванов И И">
+                        </div>
+                        <div>
+                            <span>Телефон</span>
+                            <input type="text" readonly="readonly" placeholder="8 999 222 11 00">
+                        </div>
+                        <div>
+                            <span>Email</span>
+                            <input type="text" placeholder="example@mail.com">
+                        </div>
+                    </form>
+                </div>
+                <!-- quest-form -->
+            </div>
+            <!-- question-container -->
+
+    </section>
+
+    <script src='js/jquery.min.js'></script>
+    <script src="fancybox-master/dist/jquery.fancybox.js"></script>
+    <script src='js/script.js'></script>
+</body>
+
+</html>
