@@ -84,10 +84,10 @@
                             </div>
                             <!-- main-btn -->
                             <div class='main-btn-container'>
-                                <button class='main-btn-container__look'>
+                                <button class='main-btn-container__look modalbox' href='#search-form-look'>
                                     <span>Посмотреть</span>
                                 </button>
-                                <button class='main-btn-container__post modalbox' href='#project-form'>
+                                <button class='main-btn-container__post modalbox' href='#form-add'>
                                     <span>Разместить</span>
                                 </button>
                                 <button class='main-btn-container__delete'>
@@ -99,72 +99,137 @@
                         <!-- search-answer -->
 
 
-                        <!-- project-form -->
-                        <div class='project-form-container container'>
+                        <!-- search-form-add -->
+          <div class='search-form-add-container container'>
+
+            <form action="#" id='form-add' class='search-form-add'>
+              <h3>ввод нового проекта</h3>
+              <div>
+                <span>Название проекта</span>
+                <input type="text" placeholder="Производство плюшек">
+              </div>
+
+              <div>
+                <span>Город</span>
+                <input type="text" placeholder="Москва">
+              </div>
+
+              <div class='select'>
+                <span class='select-span'>Статус проекта</span>
+                <label for="select" class="select">
+                  <input type="radio" name="list" value="not_changed" id="bg" checked />
+                  <input type="radio" name="list" value="not_changed" id="select">
+                  <label class="bg" for="bg"></label>
+                  <div class="items">
+                    <input type="radio" name="list" value="first_value" id="list[0]">
+                    <label for="list[0]">Посев</label>
+                    <input type="radio" name="list" value="second_value" id="list[1]">
+                    <label for="list[1]">Посев</label>
+                    <span id="text">Выберите статус</span>
+                  </div>
+                </label>
+              </div>
+
+              <div>
+                <span>Сумма, руб</span>
+                <input type="number" placeholder="25 000 000">
+              </div>
+
+              <div>
+                <span>Срок окупаемаости, лет</span>
+                <input type="number" placeholder="3">
+              </div>
+
+              <div>
+                <span>ФИО</span>
+                <input type="text" placeholder="Иванов И И">
+              </div>
+
+              <div>
+                <span>Телефон</span>
+                <input type="number" placeholder="+7 999 222 11 00">
+              </div>
+
+              <div>
+                <span>Почта</span>
+                <input type="email" placeholder="example@yandex.ru">
+              </div>
+
+              <div>
+                <span>Краткое описание</span>
+                <textarea>сеть плюшечных</textarea>
+              </div>
+
+              <div class="form-add-btn-container">
+                <button class='done'>Отправить проект</button>
+             <button class='dismiss'>Отменить</button>
+              </div>
+            </form>
+          </div>
+          <!-- search-form-add -->
 
 
 
-                            <form action="#" id='project-form' class='project-form'>
-                                <h3>ввод нового проекта</h3>
-                                <div>
-                                    <span>Название проекта</span>
-                                    <input type="text" placeholder="Производство плюшек">
-                                </div>
 
-                                <div>
-                                    <span>Город</span>
-                                    <input type="text" placeholder="Москва">
-                                </div>
 
-                                <div>
-                                    <span>Статус проекта</span>
-                                    <select id="test" name="test">
-                                        <option value="">Посев</option>
-                                        <option value="a1_54">500</option>
-                                        <option value="a2_54">1000</option>
-                                        <option value="a3_54">1500</option>
-                                        <option value="a4_54">2000</option>
-                                    </select>
-                                </div>
 
-                                <div>
-                                    <span>Сумма, руб</span>
-                                    <input type="number" placeholder="25 000 000">
-                                </div>
+          <!-- search-form-add-look -->
+          <div class='search-form-container-look container'>
 
-                                <div>
-                                    <span>Срок окупаемаости, лет</span>
-                                    <input type="number" placeholder="3">
-                                </div>
+            <form action="#" id='search-form-look' class='search-form-look'>
+              <h3>Проект №32</h3>
+              <div>
+                <span>Название проекта</span>
+                <input type="text" placeholder="Производство плюшек">
+              </div>
 
-                                <div>
-                                    <span>ФИО</span>
-                                    <input type="text" placeholder="Иванов И И">
-                                </div>
+              <div>
+                <span>Город</span>
+                <input type="text" placeholder="Москва">
+              </div>
 
-                                <div>
-                                    <span>Телефон</span>
-                                    <input type="number" placeholder="+7 999 222 11 00">
-                                </div>
+              <div>
+                <span>Статус проекта</span>
+                <input type="text" placeholder="Посев">
+              </div>
 
-                                <div>
-                                    <span>Почта</span>
-                                    <input type="email" placeholder="example@yandex.ru">
-                                </div>
+              <div>
+                <span>Сумма, руб</span>
+                <input type="number" placeholder="25 000 000">
+              </div>
 
-                                <div>
-                                    <span>Краткое описание</span>
-                                    <textarea>сеть плюшечных</textarea>
-                                </div>
+              <div>
+                <span>Срок окупаемаости, лет</span>
+                <input type="number" placeholder="3">
+              </div>
 
-                                <div class="project-form-btn-container">
-                                    <button class='done'>Отправить проект</button>
-                                    <button class='dismiss'>Отменить</button>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- project-form -->
+              <div>
+                <span>ФИО</span>
+                <input type="text" placeholder="Иванов И И">
+              </div>
 
+              <div>
+                <span>Телефон</span>
+                <input type="number" placeholder="+7 999 222 11 00">
+              </div>
+
+              <div>
+                <span>Почта</span>
+                <input type="email" placeholder="example@yandex.ru">
+              </div>
+
+              <div>
+                <span>Краткое описание</span>
+                <textarea>сеть плюшечных</textarea>
+              </div>
+
+              <div class="form-add-btn-container">
+                <button class='done'>Отправить проект</button>
+             <button class='dismiss'>Отменить</button>
+              </div>
+            </form>
+          </div>
+          <!-- search-form-add -->
 
 
 
@@ -275,7 +340,7 @@
                 <!-- question-item -->
                 <div class="question-position">
                     <div class='question-number'>
-                        <span>Запрос №32</span>
+                        <span>Вопрос №32</span>
                     </div>
                     <!-- main-btn -->
                     <div class='main-btn-container'>
@@ -293,7 +358,7 @@
                 <!-- question-item -->
                 <div class="question-position">
                     <div class='question-number'>
-                        <span>Запрос №32</span>
+                        <span>Вопрос №32</span>
                     </div>
                     <!-- main-btn -->
                     <div class='main-btn-container'>
