@@ -1,12 +1,14 @@
-.search-form-add {
+.search-form-look {
     display: none;
     width: 100%;
     font-size: 1rem;
     max-width: 650px;
     margin: 0 auto;
+
     h3 {
         text-align: left;
     }
+
     div {
         display: flex;
         flex-direction: column;
@@ -22,14 +24,14 @@
             padding: .4em .9em;
             height: 40px;
             font-size: .9em;
-            border: 1px solid rgba(0, 0, 0, 0.308);
+            border: none;
             border-radius: 2px;
             outline: none;
             font-family: inherit;
             background-color: #fcfcfc;
         }
 
-      
+
 
         textarea {
             padding-top: 1em;
@@ -38,7 +40,7 @@
             padding-bottom: 3.5em;
             font-family: inherit;
             font-size: .9rem;
-            border: 1px solid rgba(0, 0, 0, 0.308);
+            border: none;
             border-radius: 2px;
             resize: none;
             outline: none;
@@ -48,15 +50,16 @@
 
     .select {
         margin-bottom: 1.6em;
-       
+
         .select-span {
             margin-bottom: 5px;
         }
+
         input {
             display: none;
- 
+
         }
-        
+
 
         #text {
             position: absolute;
@@ -66,9 +69,9 @@
             margin-top: .8em;
             width: 100%;
             font-family: inherit;
-            font-size: .9rem;   
-          
-         
+            font-size: .9rem;
+
+
         }
 
         .select {
@@ -77,7 +80,7 @@
             height: 100%;
             position: relative;
             font-size: .9em;
-     
+
         }
 
         .select:before {
@@ -90,7 +93,7 @@
             height: 26px;
             text-align: center;
             line-height: 26px;
-           
+
             transform: rotate(90deg);
             cursor: pointer;
         }
@@ -98,14 +101,14 @@
         .select input[name="list"]:not(:checked)~#text {
             color: #000;
             background-color: #fcfcfc;
-           
+
         }
 
         .select input[name="list"]:checked~#text {
             background: transparent;
             color: transparent;
             z-index: 2;
-           
+
         }
 
         #select:disabled~.items #text {
@@ -123,13 +126,13 @@
             overflow: hidden;
             width: 100%;
             cursor: pointer;
-           
-         
-           
+
+
+
         }
 
         #select:not(:checked)~.items {
-           height: 40px;
+            height: 40px;
         }
 
         .items label {
@@ -139,8 +142,8 @@
             background-color: #fcfcfc;
             padding-top: 0.8em;
             padding-bottom: 0.5em;
-     
-           
+
+
         }
 
         .items label:hover {
@@ -169,7 +172,7 @@
             bottom: 0;
             right: 0;
             z-index: 0;
-           
+
         }
 
         a {
@@ -179,7 +182,7 @@
             padding: 5px 0;
             color: black;
             text-decoration: none;
-           
+
         }
 
         a:hover {
@@ -226,6 +229,7 @@
         text-transform: uppercase;
         border-radius: 2px;
         transition: all .6s;
+
         &:hover {
             cursor: pointer;
         }

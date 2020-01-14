@@ -1,7 +1,7 @@
 .request-form {
     display: none;
     width: 100%;
-    max-width: 400px;
+    max-width: 550px;
     margin: 0 auto;
 
     h4 {
@@ -9,6 +9,7 @@
         text-transform: uppercase;
         columns: rgba(0, 0, 0, 0.555);
         margin-bottom: 1em;
+        font-size: 1.2rem;
     }
     .invest {
         display: flex;
@@ -32,7 +33,7 @@
             width: 100%;
             padding: 1em;
             outline: none;
-
+            border: none;
 
 
         }
@@ -72,6 +73,7 @@
         text-transform: uppercase;
         columns: rgba(0, 0, 0, 0.555);
         margin-bottom: 1em;
+        font-size: 1.2rem;
     }
    
 
@@ -88,7 +90,7 @@
             padding: 1em;
             outline: none;
 
-
+            border: none;
 
         }
     }

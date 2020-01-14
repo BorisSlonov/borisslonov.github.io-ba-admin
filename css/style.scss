@@ -1,24 +1,4 @@
-*,
-::after,
-::before {
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box;
-}
-html,
-body {
-    font-size: calc(.5em + 1vw);
-    font-family: 'Roboto Condensed', sans-serif;
-    background-image: url(../img/bg.png);
-    padding-bottom: 5em;
-}
 
-@media (max-width:425px) {
-    html,
-    body {
-        font-size: calc(.8em + 1vw);
-    }
-}
 @import '_layout.scss';
 
 @import '_admin.scss';
@@ -26,3 +6,5 @@ body {
 @import '_project-form.scss';
 
 @import '_quest-request.scss';
+
+@import '_form-look.scss';
