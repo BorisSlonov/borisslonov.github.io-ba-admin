@@ -9,16 +9,16 @@
 
 html,
 body {
-  font-size: calc(.5em + 1vw);
+  font-size: 14px;
   font-family: 'Roboto Condensed', sans-serif;
   background-image: url(../img/bg.png);
   padding-bottom: 5em;
 }
 
-@media (max-width: 425px) {
+@media (min-width: 1440px) {
   html,
   body {
-    font-size: calc(.8em + 1vw);
+    font-size: 20px;
   }
 }
 
@@ -70,6 +70,7 @@ body {
   color: #2993b2;
   line-height: 1.5;
   text-transform: uppercase;
+  font-size: 2.5rem;
 }
 
 .header-container__item .h1-span {
@@ -108,11 +109,11 @@ body {
 }
 
 .blue-bg-container .blue-bg .blue-name {
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 .blue-bg-container .blue-bg .blue-number {
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 @media (max-width: 425px) {
@@ -132,6 +133,7 @@ body {
 }
 
 h3 {
+  font-size: 1.6rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -506,15 +508,19 @@ h3 {
   }
 }
 
-.project-form {
+.search-form-add {
   display: none;
   width: 100%;
   font-size: 1rem;
-  max-width: 450px;
+  max-width: 650px;
   margin: 0 auto;
 }
 
-.project-form div {
+.search-form-add h3 {
+  text-align: left;
+}
+
+.search-form-add div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -525,49 +531,222 @@ h3 {
   margin: 1em 0;
 }
 
-.project-form div span {
-  color: rgba(0, 0, 0, 0.747);
+.search-form-add div span {
+  color: rgba(0, 0, 0, 0.575);
+  margin-left: 10px;
+  margin-bottom: 2.5px;
 }
 
-.project-form div input {
-  padding: 1em .5em;
+.search-form-add div input {
+  padding: .4em .9em;
+  height: 40px;
+  font-size: .9em;
   border: 1px solid rgba(0, 0, 0, 0.308);
   border-radius: 2px;
+  outline: none;
+  font-family: inherit;
+  background-color: #fcfcfc;
 }
 
-.project-form div select {
-  padding: 1em .5em;
-  border: 1px solid rgba(0, 0, 0, 0.308);
-}
-
-.project-form div textarea {
-  padding: 2em .5em;
+.search-form-add div textarea {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 3.5em;
+  font-family: inherit;
+  font-size: .9rem;
   border: 1px solid rgba(0, 0, 0, 0.308);
   border-radius: 2px;
   resize: none;
+  outline: none;
+  background-color: #fcfcfc;
 }
 
-.project-form-btn-container button {
+.search-form-add .select {
+  margin-bottom: 1.6em;
+}
+
+.search-form-add .select .select-span {
+  margin-bottom: 5px;
+}
+
+.search-form-add .select input {
+  display: none;
+}
+
+.search-form-add .select #text {
+  position: absolute;
+  display: block;
+  top: 0;
+  background-color: #fcfcfc;
+  margin-top: .8em;
   width: 100%;
+  font-family: inherit;
+  font-size: .9rem;
+}
+
+.search-form-add .select .select {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: .9em;
+}
+
+.search-form-add .select .select:before {
+  content: ">";
+  display: inline-block;
+  position: absolute;
+  right: 0.5em;
+  z-index: 2;
+  width: 30px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.search-form-add .select .select input[name="list"]:not(:checked) ~ #text {
+  color: #000;
+  background-color: #fcfcfc;
+}
+
+.search-form-add .select .select input[name="list"]:checked ~ #text {
+  background: transparent;
+  color: transparent;
+  z-index: 2;
+}
+
+.search-form-add .select #select:disabled ~ .items #text {
+  background: #eee;
+}
+
+.search-form-add .select .items {
+  display: block;
+  padding-bottom: 1.5em;
+  top: -15px;
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.308);
+  background-color: #fcfcfc;
+  border-radius: 2px;
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+}
+
+.search-form-add .select #select:not(:checked) ~ .items {
+  height: 40px;
+}
+
+.search-form-add .select .items label {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.822);
+  display: none;
+  padding-left: 1em;
+  background-color: #fcfcfc;
+  padding-top: 0.8em;
+  padding-bottom: 0.5em;
+}
+
+.search-form-add .select .items label:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+.search-form-add .select #select:checked ~ .items {
+  padding-top: 30px;
+}
+
+.search-form-add .select #select:checked ~ .items label {
+  display: block;
+}
+
+.search-form-add .select .items input:checked + label {
+  display: block !important;
+  border: none;
+  background-color: #fcfcfc;
+}
+
+.search-form-add .select #select:checked ~ .bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.search-form-add .select a {
+  display: block;
+  width: 160px;
+  text-align: center;
+  padding: 5px 0;
+  color: black;
+  text-decoration: none;
+}
+
+.search-form-add .select a:hover {
+  cursor: pointer;
+  border-color: red;
+}
+
+.search-form-add ::-webkit-input-placeholder {
+  color: #000;
+  font-size: .9rem;
+}
+
+.search-form-add :-moz-placeholder {
+  /* Firefox 18- */
+  color: #000;
+  font-size: .9rem;
+}
+
+.search-form-add ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #000;
+  font-size: .9rem;
+}
+
+.search-form-add :-ms-input-placeholder {
+  color: #000;
+  font-size: .9rem;
+}
+
+.form-add-btn-container button {
   padding: 1em 0;
   color: #fff;
   text-transform: uppercase;
   border-radius: 2px;
+  -webkit-transition: all .6s;
+  transition: all .6s;
 }
 
-.project-form-btn-container .done {
-  background-color: green;
+.form-add-btn-container button:hover {
+  cursor: pointer;
 }
 
-.project-form-btn-container .dismiss {
+.form-add-btn-container .done {
+  background-color: #29b133;
+}
+
+.form-add-btn-container .done:hover {
+  background-color: #31ca3b;
+}
+
+.form-add-btn-container .dismiss {
   margin-top: .5em;
-  background-color: red;
+  background-color: #b22c29;
+}
+
+.form-add-btn-container .dismiss:hover {
+  background-color: #cc322f;
 }
 
 .request-form {
   display: none;
   width: 100%;
-  max-width: 400px;
+  max-width: 550px;
   margin: 0 auto;
   /* Firefox 19+ */
   /* Firefox 18- */
@@ -579,6 +758,7 @@ h3 {
   -webkit-columns: rgba(0, 0, 0, 0.555);
           columns: rgba(0, 0, 0, 0.555);
   margin-bottom: 1em;
+  font-size: 1.2rem;
 }
 
 .request-form .invest {
@@ -613,6 +793,7 @@ h3 {
   width: 100%;
   padding: 1em;
   outline: none;
+  border: none;
 }
 
 .request-form ::-webkit-input-placeholder {
@@ -646,6 +827,7 @@ h3 {
   -webkit-columns: rgba(0, 0, 0, 0.555);
           columns: rgba(0, 0, 0, 0.555);
   margin-bottom: 1em;
+  font-size: 1.2rem;
 }
 
 .quest-form div {
@@ -666,6 +848,7 @@ h3 {
   width: 100%;
   padding: 1em;
   outline: none;
+  border: none;
 }
 
 .quest-form ::-webkit-input-placeholder {
@@ -682,5 +865,240 @@ h3 {
 
 .quest-form :-ms-input-placeholder {
   font-size: 1rem;
+}
+
+.search-form-look {
+  display: none;
+  width: 100%;
+  font-size: 1rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.search-form-look h3 {
+  text-align: left;
+}
+
+.search-form-look div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1em 0;
+}
+
+.search-form-look div span {
+  color: rgba(0, 0, 0, 0.575);
+  margin-left: 10px;
+  margin-bottom: 2.5px;
+}
+
+.search-form-look div input {
+  padding: .4em .9em;
+  height: 40px;
+  font-size: .9em;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  font-family: inherit;
+  background-color: #fcfcfc;
+}
+
+.search-form-look div textarea {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 3.5em;
+  font-family: inherit;
+  font-size: .9rem;
+  border: none;
+  border-radius: 2px;
+  resize: none;
+  outline: none;
+  background-color: #fcfcfc;
+}
+
+.search-form-look .select {
+  margin-bottom: 1.6em;
+}
+
+.search-form-look .select .select-span {
+  margin-bottom: 5px;
+}
+
+.search-form-look .select input {
+  display: none;
+}
+
+.search-form-look .select #text {
+  position: absolute;
+  display: block;
+  top: 0;
+  background-color: #fcfcfc;
+  margin-top: .8em;
+  width: 100%;
+  font-family: inherit;
+  font-size: .9rem;
+}
+
+.search-form-look .select .select {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: .9em;
+}
+
+.search-form-look .select .select:before {
+  content: ">";
+  display: inline-block;
+  position: absolute;
+  right: 0.5em;
+  z-index: 2;
+  width: 30px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.search-form-look .select .select input[name="list"]:not(:checked) ~ #text {
+  color: #000;
+  background-color: #fcfcfc;
+}
+
+.search-form-look .select .select input[name="list"]:checked ~ #text {
+  background: transparent;
+  color: transparent;
+  z-index: 2;
+}
+
+.search-form-look .select #select:disabled ~ .items #text {
+  background: #eee;
+}
+
+.search-form-look .select .items {
+  display: block;
+  padding-bottom: 1.5em;
+  top: -15px;
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.308);
+  background-color: #fcfcfc;
+  border-radius: 2px;
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+}
+
+.search-form-look .select #select:not(:checked) ~ .items {
+  height: 40px;
+}
+
+.search-form-look .select .items label {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.822);
+  display: none;
+  padding-left: 1em;
+  background-color: #fcfcfc;
+  padding-top: 0.8em;
+  padding-bottom: 0.5em;
+}
+
+.search-form-look .select .items label:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+.search-form-look .select #select:checked ~ .items {
+  padding-top: 30px;
+}
+
+.search-form-look .select #select:checked ~ .items label {
+  display: block;
+}
+
+.search-form-look .select .items input:checked + label {
+  display: block !important;
+  border: none;
+  background-color: #fcfcfc;
+}
+
+.search-form-look .select #select:checked ~ .bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.search-form-look .select a {
+  display: block;
+  width: 160px;
+  text-align: center;
+  padding: 5px 0;
+  color: black;
+  text-decoration: none;
+}
+
+.search-form-look .select a:hover {
+  cursor: pointer;
+  border-color: red;
+}
+
+.search-form-look ::-webkit-input-placeholder {
+  color: #000;
+  font-size: .9rem;
+}
+
+.search-form-look :-moz-placeholder {
+  /* Firefox 18- */
+  color: #000;
+  font-size: .9rem;
+}
+
+.search-form-look ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #000;
+  font-size: .9rem;
+}
+
+.search-form-look :-ms-input-placeholder {
+  color: #000;
+  font-size: .9rem;
+}
+
+.form-add-btn-container button {
+  padding: 1em 0;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 2px;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.form-add-btn-container button:hover {
+  cursor: pointer;
+}
+
+.form-add-btn-container .done {
+  background-color: #29b133;
+}
+
+.form-add-btn-container .done:hover {
+  background-color: #31ca3b;
+}
+
+.form-add-btn-container .dismiss {
+  margin-top: .5em;
+  background-color: #b22c29;
+}
+
+.form-add-btn-container .dismiss:hover {
+  background-color: #cc322f;
 }
 /*# sourceMappingURL=style.css.map */
