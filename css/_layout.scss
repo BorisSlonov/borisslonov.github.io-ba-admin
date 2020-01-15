@@ -7,10 +7,19 @@
 }
 html,
 body {
-    font-size: 14px;
+   
     font-family: 'Roboto Condensed', sans-serif;
     background-image: url(../img/bg.png);
     padding-bottom: 5em;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 @media (min-width: 1440px) {
@@ -20,27 +29,7 @@ body {
     }
 }
 .container {
-    max-width: 1170px;
+    max-width: 1140px;
     margin: 0 auto;
-    padding: 0 15px;
-}
-@media (max-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
-}
-@media (max-width: 425px) {
-    .container {
-        max-width: 425px;
-    }
-}
-@media (max-width: 375px) {
-    .container {
-        max-width: 375px;
-    }
-}
-@media (max-width: 320px) {
-    .container {
-        max-width: 320px;
-    }
+    padding: 0 10px;
 }

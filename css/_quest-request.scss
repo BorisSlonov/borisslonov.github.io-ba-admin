@@ -1,3 +1,13 @@
+#request-form {
+
+}
+
+@media (max-width:425px) {
+    #request-form {
+        padding: 10px;
+    }
+}
+
 .request-form {
     display: none;
     width: 100%;
@@ -11,13 +21,21 @@
         margin-bottom: 1em;
         font-size: 1.2rem;
     }
-    .invest {
-        display: flex;
-        input:first-child {
-            margin-right: 0.2em;
-        }
-        input:last-child {
-            margin-left: 0.2em;
+    .invest-container {
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+       padding-left: 10px;
+        .invest {
+           flex-basis: 200px;
+            input:first-child {
+                width: 100%;
+                margin-right: 0.2em;
+               
+            }
+            input:last-child {
+                margin-left: 0.2em;
+            }
         }
     }
 
@@ -27,11 +45,14 @@
         span {
             display: flex;
             flex-direction: column;
+            color: rgba(0, 0, 0, 0.753);
         }
 
         input {
             width: 100%;
-            padding: 1em;
+            padding-left: 1em;
+            padding-top: 1em;
+            padding-bottom: 1em;
             outline: none;
             border: none;
 
@@ -41,27 +62,39 @@
 
     ::-webkit-input-placeholder {
         font-size: 1rem;
+        color: black;
     }
 
     ::-moz-placeholder {
         font-size: 1rem;
+        color: black;
     }
 
     /* Firefox 19+ */
     :-moz-placeholder {
         font-size: 1rem;
+        color: black;
     }
 
     /* Firefox 18- */
     :-ms-input-placeholder {
         font-size: 1rem;
+        color: black;
     }
 }
 
 
 
 //question-form
+#quest-form {
 
+}
+
+@media (max-width:425px) {
+    #quest-form {
+        padding: 10px;
+    }
+}
 .quest-form {
     display: none;
     width: 100%;
@@ -83,13 +116,13 @@
         span {
             display: flex;
             flex-direction: column;
+            color: rgba(0, 0, 0, 0.753);
         }
 
         input {
             width: 100%;
             padding: 1em;
             outline: none;
-
             border: none;
 
         }
@@ -97,19 +130,23 @@
 
     ::-webkit-input-placeholder {
         font-size: 1rem;
+        color: black;
     }
 
     ::-moz-placeholder {
         font-size: 1rem;
+        color: black;
     }
 
     /* Firefox 19+ */
     :-moz-placeholder {
         font-size: 1rem;
+        color: black;
     }
 
     /* Firefox 18- */
     :-ms-input-placeholder {
         font-size: 1rem;
+        color: black;
     }
 }
